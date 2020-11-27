@@ -77,7 +77,7 @@ handleSubmit = async e => {
         showEmailErrMsg: false,
         showMsgErrMsg: false,
         isLoading: false
-      })
+      }) 
     }
 
     //if user input is somehow did not meet requirement
@@ -127,7 +127,6 @@ handleSubmit = async e => {
         });
       }
     }
-
   };
 
   toggle = () => {

@@ -33,7 +33,7 @@ export const AlertBoxContainer  = styled.div`
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0,0,0, .4);
+    background: rgba(0,0,0, .8);
     justify-content: center;
     align-items: center;
 `;
@@ -47,9 +47,9 @@ export const AlertBox = styled.div`
     background: #f8f9fa;
     width: 100%;
     max-width: 430px;
-    border-radius: 8px;
+    border-radius: 3px;
     padding: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
     margin: 0 20px;
     margin-top: -30px;
 
@@ -72,20 +72,23 @@ export const ButtonContainer = styled.div`
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    padding: 10px 20px 0;
+    padding: 10px 10px 0;
 
     button {
-        width: 90px;
-        height: 40px;
+        width: 65px;
+        height: 35px;
         background: #0c2b87;
         color: #f8f9fa;
         font-size: 1rem;
-        border-radius: 8px;
         border: none;
         outline: none;
         margin-top: 15px;
         cursor: pointer;
         justify-content: flex-end;
+
+        &:hover {
+            background: #ec615b;
+        }
     }
 `;
 

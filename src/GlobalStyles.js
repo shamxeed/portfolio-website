@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     }
-    
+
     body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -49,15 +49,14 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     .checkmark {
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
         border-radius: 50%;
         display: block;
         stroke-width: 2;
         stroke: #000;
         stroke-miterlimit: 10;
-        margin: 10% auto;
-        margin-bottom:6%;
+        margin: 15px auto;
         box-shadow: inset 0px 0px 0px #7ac142;
         animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
     }
