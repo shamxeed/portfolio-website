@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for http://shamxeed.com/</title>
+  <link>http://shamxeed.com/</link>
+
+<item>
+     <link>https://shamxeed.com/</link>
+     <title>Shamxeed</title>
+     <description>Shamxeed is a Web Designer, Developer, MERN Stack from Yola, Nigeria...</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  

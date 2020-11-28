@@ -13,7 +13,8 @@ import { IntroContainer,
 import {FaDev,
         FaGithub,
         FaLinkedin,
-        FaTwitter
+        FaTwitter,
+        FaStackOverflow
     } from 'react-icons/fa';
 
 import Tippy from '@tippyjs/react';
@@ -55,6 +56,11 @@ const Intro = ({scrolling}) => {
                 <Tippy content="LinkedIn" placement="bottom">
                     <SocialMediaLink href="https://linkedin.com/in/danjuma-musa-629ba61b2" target="blank">
                         <FaLinkedin />
+                    </SocialMediaLink>
+                </Tippy>
+                <Tippy content="Stack Overflow" placement="bottom">
+                    <SocialMediaLink href="https://stackoverflow.com/users/13608842/shamxeed" target="blank">
+                        <FaStackOverflow />
                     </SocialMediaLink>
                 </Tippy>
                 <Tippy content="Twitter" placement="bottom">
