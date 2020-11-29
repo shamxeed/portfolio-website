@@ -131,12 +131,13 @@ export const SocialMediaContainer = styled.div`
 export const SocialMediaLink = styled.a`
     text-decoration: none;
     font-size: clamp(2.2rem, 10vw, 2.5rem);
-    margin-right: 1rem;
+    margin-right: .6rem;
     color: #ffffff;
     cursor: pointer;
     z-index: 1;
 
     @media screen and (min-width: 800px) {
+        margin-right: .9rem;
         &:hover {
             color: #EC615B;
             font-size: 2.8rem;
@@ -158,7 +159,7 @@ export const Arrow = styled.span`
     border-right: 8px solid #ec615b;
     border-bottom: 8px solid #ec615b;
     border-radius: 5px;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-left: -20px;
     cursor: pointer;
     z-index: 1;
