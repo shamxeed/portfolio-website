@@ -33,7 +33,7 @@ const About = () => {
                 </DeveloperAvatarContainer>
                 <AboutWrittingsContainer>
                     <p>
-                        Hi, I'm <em>DANJUMA Musa</em> AKA <em>Shamxeed</em>, 21 years old <em>MERN Stack Developer</em> with nearly <em>1.5 years of coding experience.</em> I am currently more focused on the <em>front-end</em> to cement my knowledge on that but I'm very comfortable with the <em>back-end</em> as well. I am passionate about modern web technologies and enjoy learning something new every day. That <em>sleepy boy</em> with a busy life, from <em>Yola, Nigeria.</em>
+                        Hi, I'm <em>DANJUMA Musa</em> AKA <em>Shamxeed</em>, 21 years old <em>MERN Stack Developer</em> with nearly <em>2.5 years of coding experience.</em> I am currently more focused on the <em>front-end</em> to cement my knowledge on that but I'm very comfortable with the <em>back-end</em> as well. I am passionate about modern web technologies and enjoy learning something new every day. That <em>sleepy boy</em> with a busy life, from <em>Yola, Nigeria.</em>
                     </p>
                 </AboutWrittingsContainer>
             </AboutWrapper>
