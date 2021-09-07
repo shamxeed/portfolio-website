@@ -24,13 +24,9 @@ import DevAatar from '../images/devAvatar.svg';
 
 const About = () => {
 
-    const myDateOfBirth = '11-09-1999'
+    const myAge = diffInYears(new Date(), new Date(1999, 10, 9))
 
-    const yearIStartedCoding = '09-01-2019'
-
-    const myAge = diffInYears(new Date(), new Date(myDateOfBirth))
-
-    const monthsImCoding = diffInMonths(new Date(), new Date(yearIStartedCoding))
+    const monthsImCoding = diffInMonths(new Date(), new Date(2019, 8, 1))
 
     const yearsImCoding = (monthsImCoding / 12).toFixed(1)
 

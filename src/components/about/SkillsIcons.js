@@ -17,7 +17,7 @@ import {
     SiPostgresql, 
     SiMongodb,
     SiExpo,
-    SiPostman,
+    SiAndroidstudio,
     SiXcode
 } from 'react-icons/si';
     
@@ -100,9 +100,9 @@ const SkillsIcons = () => {
                     <SiVisualstudiocode color="#007acc"/>
                 </SkillsIconsStyled>
             </Tippy>
-            <Tippy content="Postman">
+            <Tippy content="Android Studio">
                 <SkillsIconsStyled>
-                    <SiPostman color="#FF6C37"/>
+                    <SiAndroidstudio color="#3DDC84"/>
                 </SkillsIconsStyled>
             </Tippy>
             <Tippy content="Xcode">
