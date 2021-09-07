@@ -3,7 +3,7 @@ const validateForm = ({ name, email, message }) => {
 
     let error
     
-    const isEmailValid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.exec(email)
+    const isEmailValid = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.exec(email)
         
     if(name.trim().length <= 6) {
         error = 'Name is too short!'
