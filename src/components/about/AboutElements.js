@@ -242,5 +242,18 @@ export const SkillsIconsStyled = styled.div`
 
     @media screen and (min-width: 800px){
         width: 80px;
+        height: 74px;
+    }
+`;
+
+export const SvgIcon = styled.img`
+    width: 60px;
+    height: 80px;
+    margin-top: -10px;
+
+    @media screen and (min-width: 800px){
+        width: 80px;
+        height: 65px;
+        margin-top: unset;
     }
 `;

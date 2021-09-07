@@ -1,44 +1,38 @@
-import React from 'react';
-import { TextAreaWrapper,
-         LabelWrapper,
-         LabelIcons,
-         Label,
-         TextArea,
-         Btn,
-         ErrorAlertBox,
-         Loader,
-         LoaderWrapper
-    } from './ContactELements';
-import {MdSend} from 'react-icons/md';
-import {BsPen} from 'react-icons/bs';
+import React from 'react'
+import { BsPen } from 'react-icons/bs';
+
+import { 
+    TextAreaWrapper,
+    LabelWrapper,
+    LabelIcons,
+    Label,
+    TextArea
+} from './ContactELements';
 
 
-const Message= ({msgErrMsg, show, handleChange, isLoading}) => {
+const Message= ({ value, handleChange }) => {
 
     return(
         <>
-            <TextAreaWrapper show={show}>
+            <TextAreaWrapper>
+                
                 <LabelWrapper>
                     <LabelIcons>
                         <BsPen />
                     </LabelIcons>
-                    <Label htmlFor="message">
-                        Message
-                    </Label>
+                    <Label htmlFor="message">Message</Label>
                 </LabelWrapper>
-                <TextArea show={show} onChange={handleChange} name="message" rows="6" id="message" placeholder="Write your message here..."/>
-                <ErrorAlertBox>
-                    {show ? msgErrMsg[0].msg : ''}
-                </ErrorAlertBox>
+
+                <TextArea 
+                    name="message" 
+                    rows="6" 
+                    id="message" 
+                    value={value}
+                    onChange={handleChange} 
+                    placeholder="Write your message here..."
+                />
+            
             </TextAreaWrapper>
-            <Btn type="submit">
-                {isLoading ? (
-                    <LoaderWrapper>
-                        <Loader />
-                        <p>sending...</p>
-                    </LoaderWrapper>
-                ) : <MdSend />}
-            </Btn>
         </>
     )
 }

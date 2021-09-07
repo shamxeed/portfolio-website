@@ -1,38 +1,82 @@
-import React from 'react';
+import React, { useState, memo } from 'react'
+import { toast } from 'react-toastify'
+import Axios from 'axios'
+
 import {
     ContactContainer,
-    Footer,
     Form,
     FormWrapper
 } from './ContactELements';
 
-import FullName from './FullName';
-import Email from './Email';
-import Alert from './AlertBox';
-import Message from './Message';
+import FullName from './FullName'
+import Email from './Email'
+import Message from './Message'
+import { endpoint } from '../../constants/endpoint';
+import SubmitButton from './SubmitButton';
+import { validateForm } from '../../utils/validateForm';
 
 
-const Contact = ({handleSubmit, handleChange, isOpen, toggle, nameErrMsg, showNameErrMsg, emailErrMsg, showEmailErrMsg, msgErrMsg, showMsgErrMsg, isLoading}) => {
+const Contact = () => {
+
+    const [isLoading, setLoading] = useState(false)
+
+    const [form, setForm] = useState({
+        name: '',
+        email: '',
+        message: ''
+    })
+
+    const { name, email, message } = form
+
+    const handleChange = (event) => setForm({...form, [event.target.name]: event.target.value})
+
+    const onSubmit = async e => {
+
+        e.preventDefault()
+
+        if(isLoading) return
+
+        const { error } = validateForm(form)
+
+        if(!!error) {
+            return toast.error(error)
+        }
+
+        setLoading(true)
+
+        try {
+            
+            await Axios.post(endpoint, form)
+
+            setLoading(false)
+            setForm({name: '', email: '', message: ''})
+            toast.success('Thank you for your message!!!')
+
+        } catch (err) {
+
+            setLoading(false)
+            
+            toast.error(err?.message)
+        
+        }
+    }
+
 
     return(
         <ContactContainer>
             <h2>Contact Me.</h2>
             
-            <Alert isOpen={isOpen} toggle={toggle} />
-
-        <FormWrapper>
-            <Form onSubmit={handleSubmit} id="form">
-                <FullName nameErrMsg={nameErrMsg} show={showNameErrMsg} handleChange={handleChange}/>
-                <Email emailErrMsg={emailErrMsg} show={showEmailErrMsg} handleChange={handleChange} />
-                <Message msgErrMsg={msgErrMsg} show={showMsgErrMsg} handleChange={handleChange} isLoading={isLoading}/>
-            </Form>
-        </FormWrapper>
-        <Footer>
-            <p> &copy; 2020 Shamxeed</p>
-        </Footer>
+            <FormWrapper>
+                <Form onSubmit={onSubmit} id="form">
+                    <FullName value={name} handleChange={handleChange} />
+                    <Email value={email} handleChange={handleChange} />
+                    <Message value={message} handleChange={handleChange} />
+                    <SubmitButton isLoading={isLoading} />
+                </Form>
+            </FormWrapper>
         </ContactContainer>
     )
 }
 
 
-export default Contact;
+export default memo(Contact);

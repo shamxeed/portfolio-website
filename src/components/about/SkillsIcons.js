@@ -1,22 +1,29 @@
 import React from 'react';
-import {FaHtml5,
-        FaCss3, 
-        FaJs, 
-        FaReact, 
-        FaGit, 
-        FaNodeJs, 
-        FaFigma
-    } from 'react-icons/fa';
-import {SiNextDotJs,
-        SiFirebase, 
-        SiVisualstudiocode, 
-        SiPostman, 
-        SiMongodb 
-    } from 'react-icons/si';
+
+import {
+    FaHtml5,
+    FaCss3, 
+    FaJs, 
+    FaReact, 
+    FaGit, 
+    FaNodeJs, 
+    FaFigma
+} from 'react-icons/fa';
+
+import {
+    SiNextDotJs,
+    SiVisualstudiocode, 
+    SiGraphql,
+    SiPostgresql, 
+    SiMongodb,
+    SiExpo,
+    SiPostman,
+    SiXcode
+} from 'react-icons/si';
     
-import {SkillsIconsStyled} from './AboutElements';
-import Tippy from '@tippyjs/react';
-import 'tippy.js/dist/tippy.css';
+import { SkillsIconsStyled, SvgIcon } from './AboutElements';
+import Tippy from '@tippyjs/react'
+import prismaSvg from '../images/prisma.svg'
 
 
 const SkillsIcons = () => {
@@ -43,9 +50,14 @@ const SkillsIcons = () => {
                     <FaGit color="#F05032"/>
                 </SkillsIconsStyled>
             </Tippy>
-            <Tippy content="React Js">
+            <Tippy content="ReactJs/Native">
                 <SkillsIconsStyled>
                     <FaReact color="#61DAFB"/>
+                </SkillsIconsStyled>
+            </Tippy>
+            <Tippy content="Expo">
+                <SkillsIconsStyled>
+                    <SiExpo color="#000020"/>
                 </SkillsIconsStyled>
             </Tippy>
             <Tippy content="Next.Js">
@@ -63,14 +75,24 @@ const SkillsIcons = () => {
                     <FaFigma color="#F24E1E"/>
                 </SkillsIconsStyled>
             </Tippy>
+            <Tippy content="Graph-QL">
+                <SkillsIconsStyled>
+                    <SiGraphql color="#E10098"/>
+                </SkillsIconsStyled>
+            </Tippy>
+            <Tippy content="PostgreSQL">
+                <SkillsIconsStyled>
+                    <SiPostgresql color="#4169E1"/>
+                </SkillsIconsStyled>
+            </Tippy>
             <Tippy content="MongoDB">
                 <SkillsIconsStyled>
                     <SiMongodb color="#47A248"/>
                 </SkillsIconsStyled>
             </Tippy>
-            <Tippy content="Postman">
+            <Tippy content="Prisma">
                 <SkillsIconsStyled>
-                    <SiPostman color="#FF6C37"/>
+                    <SvgIcon src={prismaSvg} />
                 </SkillsIconsStyled>
             </Tippy>
             <Tippy content="VSCode">
@@ -78,9 +100,14 @@ const SkillsIcons = () => {
                     <SiVisualstudiocode color="#007acc"/>
                 </SkillsIconsStyled>
             </Tippy>
-            <Tippy content="Firebase">
+            <Tippy content="Postman">
                 <SkillsIconsStyled>
-                    <SiFirebase color="#FFCA28"/>
+                    <SiPostman color="#FF6C37"/>
+                </SkillsIconsStyled>
+            </Tippy>
+            <Tippy content="Xcode">
+                <SkillsIconsStyled>
+                    <SiXcode color="#147EFB"/>
                 </SkillsIconsStyled>
             </Tippy>
         </>

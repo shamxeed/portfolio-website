@@ -1,24 +1,27 @@
 import React from 'react';
-import {InputWrapper, LabelWrapper, LabelIcons, Label, Input, ErrorAlertBox} from './ContactELements';
-import {HiOutlineMail} from 'react-icons/hi';
+import { HiOutlineMail } from 'react-icons/hi';
+
+import { InputWrapper, LabelWrapper, LabelIcons, Label, Input } from './ContactELements';
 
 
-const Email = ({emailErrMsg, show, handleChange}) => {
+const Email = ({ value, handleChange }) => {
 
     return(
-        <InputWrapper show={show}>
+        <InputWrapper>
             <LabelWrapper>
                 <LabelIcons>
                     <HiOutlineMail />
                 </LabelIcons>
-                <Label htmlFor="email">
-                    Your Email
-                </Label>
+                <Label htmlFor="email">Your Email</Label>
             </LabelWrapper>
-            <Input show={show} onChange={handleChange} type="email" id="email" name="email" placeholder="name@gmail.com"/>
-            <ErrorAlertBox>
-                {show ? emailErrMsg[0].msg : ''}
-            </ErrorAlertBox>
+            <Input 
+                type="email" 
+                id="email" 
+                name="email" 
+                value={value}
+                onChange={handleChange}
+                placeholder="name@gmail.com"
+            />
         </InputWrapper>
     )
 }

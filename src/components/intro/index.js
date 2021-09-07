@@ -1,16 +1,19 @@
-import React from 'react';
-import { IntroContainer,
-         SlideUpContainer, 
-         SlideUpWrapper, 
-         SocialMediaContainer, 
-         SocialMediaLink,
-         ArrowContainer,
-         Arrow,
-         H1One,
-         SlideUpText
-    } from './IntroElements';
+import React from 'react'
 
-import {FaDev,
+import { 
+    IntroContainer,
+    SlideUpContainer, 
+    SlideUpWrapper, 
+    SocialMediaContainer, 
+    SocialMediaLink,
+    ArrowContainer,
+    Arrow,
+    H1One,
+    SlideUpText
+} from './IntroElements';
+
+import {
+        FaDev,
         FaGithub,
         FaLinkedin,
         FaTwitter,
@@ -35,7 +38,7 @@ const Intro = ({scrolling}) => {
                                 <br/>
                                 Developer 
                                 <br/>
-                                MERN Stack
+                                Full-Stack
                             </span>
                         </SlideUpWrapper>
                     &#125;
