@@ -1,16 +1,15 @@
 # Portfolio Website  
 
-> This is a portfolio website I built with React js for front-end and Node.js, ExpressJs & Nodemailer for the back-end.  
+> This is a portfolio website built with React js.  
 
 ### Live-Demo: [shamxeed.com](https://shamxeed.com)  
 
 ### Preview  
 ![site-preview](https://github.com/shamxeed/portfolio-website/blob/master/src/components/images/site-preview.png)
 
-## Available Scripts
+## Available Scripts  
 
-In the project directory, you can run:
-
+Clone this repository and In the project directory, you can run:
 
 ### `npm install`
 
