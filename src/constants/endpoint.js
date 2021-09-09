@@ -1,2 +1,2 @@
 
-export const endpoint = 'https://shamxeed-portfolio.herokuapp.com/api/form'
+export const endpoint = 'https://mycontact-form.herokuapp.com/api/contact'

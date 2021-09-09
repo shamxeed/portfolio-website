@@ -46,11 +46,11 @@ const Contact = () => {
 
         try {
             
-            await Axios.post(endpoint, form)
+            const { data } = await Axios.post(endpoint, form)
 
             setLoading(false)
+            toast.success(data?.msg)
             setForm({name: '', email: '', message: ''})
-            toast.success('Thank you for your message!!!')
 
         } catch (err) {
 
