@@ -2,7 +2,7 @@
 
 > This is a portfolio website built with React js.  
 
-### Live-Demo: [shamxeed.com](https://shamxeed.com)  
+### [Live-Demo](https://shamxeed05.netlify.app)  
 
 ### Preview  
 ![site-preview](https://github.com/shamxeed/portfolio-website/blob/master/src/components/images/site-preview.png)
