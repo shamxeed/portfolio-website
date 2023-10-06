@@ -1,2 +1,4 @@
+const dev = 'http://localhost:3000/api';
+const prod = 'https://www.saukie.net/api';
 
-export const endpoint = 'https://mycontact-form.herokuapp.com/api/contact'
+export const baseURL = process.env.NODE_ENV === 'production' ? prod : dev;

@@ -95,7 +95,7 @@ export const Label = styled.label`
 
 export const Input = styled.input`
   width: 100%;
-  height: 40px;
+  height: 50px;
   padding: 5px 10px;
   outline: none;
   border: 1.5px solid #555555;
@@ -120,7 +120,7 @@ export const TextArea = styled.textarea`
 
 export const Btn = styled.button`
   width: 100%;
-  height: 35px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -169,5 +169,5 @@ export const Loader = styled.div`
     100% {
       transform: rotate(360deg);
     }
-  } ;
+  }
 `;

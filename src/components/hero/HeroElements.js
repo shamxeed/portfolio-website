@@ -12,11 +12,10 @@ export const IntroContainer = styled.div`
 
   span {
     color: #ec615b;
-    font-family: 'Poppins';
   }
   em {
     color: #ec615b;
-    font-family: 'Poppins';
+    font-style: 'italic';
   }
 
   @media only screen and (min-width: 800px) {
@@ -27,7 +26,6 @@ export const IntroContainer = styled.div`
 export const H1One = styled.h1`
   color: #fff;
   font-size: clamp(2.5rem, 10vw, 4.5rem);
-  font-family: 'Poppins';
   word-spacing: 4px;
   line-height: 80px;
   text-align: center;
@@ -42,7 +40,6 @@ export const H1One = styled.h1`
 export const SlideUpText = styled.h1`
   color: #fff;
   font-size: clamp(2.5rem, 10vw, 4.5rem);
-  font-family: 'Poppins';
   word-spacing: 4px;
   line-height: 80px;
   text-align: center;

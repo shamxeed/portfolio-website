@@ -1,29 +1,33 @@
-import React, { useState, memo } from 'react';
+'use client';
+
+import React from 'react';
 import { toast } from 'react-toastify';
-import Axios from 'axios';
 
 import { ContactContainer, Form, FormWrapper } from './ContactELements';
 
 import FullName from './FullName';
 import Email from './Email';
 import Message from './Message';
-import { endpoint } from '../../constants';
+import { baseURL } from '../../constants';
 import SubmitButton from './SubmitButton';
 import { validateForm } from '../../utils/validateForm';
 
-const Contact = () => {
-  const [isLoading, setLoading] = useState(false);
+const defaultForm = {
+  name: '',
+  email: '',
+  message: '',
+};
 
-  const [form, setForm] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
+const Contact = () => {
+  const [isLoading, setLoading] = React.useState(false);
+
+  const [form, setForm] = React.useState(defaultForm);
 
   const { name, email, message } = form;
 
-  const handleChange = (event) =>
+  const handleChange = (event) => {
     setForm({ ...form, [event.target.name]: event.target.value });
+  };
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -39,15 +43,23 @@ const Contact = () => {
     setLoading(true);
 
     try {
-      const { data } = await Axios.post(endpoint, form);
+      const response = await fetch(`${baseURL}/contact`, {
+        method: 'post',
+        body: JSON.stringify(form),
+      });
 
-      setLoading(false);
-      toast.success(data?.msg);
-      setForm({ name: '', email: '', message: '' });
+      if (response.status === 200) {
+        const data = await response.json();
+
+        toast.success(data?.msg);
+        setForm(defaultForm);
+      } else {
+        toast.error('Oops! Something went wrong!!');
+      }
     } catch (err) {
-      setLoading(false);
-
       toast.error(err?.message);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -60,11 +72,11 @@ const Contact = () => {
           <FullName value={name} handleChange={handleChange} />
           <Email value={email} handleChange={handleChange} />
           <Message value={message} handleChange={handleChange} />
-          <SubmitButton isLoading={isLoading} />
+          <SubmitButton isLoading={isLoading} type={'submit'} />
         </Form>
       </FormWrapper>
     </ContactContainer>
   );
 };
 
-export default memo(Contact);
+export default React.memo(Contact);

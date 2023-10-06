@@ -11,7 +11,6 @@ import {
 } from 'react-icons/fa';
 
 import {
-  SiNextDotJs,
   SiVisualstudiocode,
   SiGraphql,
   SiPostgresql,
@@ -21,9 +20,10 @@ import {
   SiXcode,
 } from 'react-icons/si';
 
+import { TbBrandNextjs } from 'react-icons/tb';
+
 import { SkillsIconsStyled, SvgIcon } from './AboutElements';
 import Tippy from '@tippyjs/react';
-import prismaSvg from '../images/prisma.svg';
 
 const SkillsIcons = () => {
   return (
@@ -60,7 +60,7 @@ const SkillsIcons = () => {
       </Tippy>
       <Tippy content='Next.Js'>
         <SkillsIconsStyled>
-          <SiNextDotJs color='#000000' />
+          <TbBrandNextjs color='#000000' />
         </SkillsIconsStyled>
       </Tippy>
       <Tippy content='Node.Js'>
@@ -90,7 +90,7 @@ const SkillsIcons = () => {
       </Tippy>
       <Tippy content='Prisma'>
         <SkillsIconsStyled>
-          <SvgIcon src={prismaSvg} />
+          <SvgIcon src={'/prisma.svg'} />
         </SkillsIconsStyled>
       </Tippy>
       <Tippy content='VSCode'>

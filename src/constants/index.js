@@ -1,3 +1,3 @@
-import { endpoint } from './endpoint';
+import { baseURL } from './endpoint';
 
-export { endpoint };
+export { baseURL };

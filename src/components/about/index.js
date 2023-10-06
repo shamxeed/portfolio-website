@@ -18,7 +18,6 @@ import {
 } from './AboutElements';
 
 import SkillIcons from './SkillsIcons';
-import DevAatar from '../images/devAvatar.svg';
 
 const About = () => {
   const myAge = diffInYears(new Date(), new Date(1999, 10, 9));
@@ -35,13 +34,19 @@ const About = () => {
           <Comment>
             <Typing>I am open to work...</Typing>
           </Comment>
-          <DeveloperAvatar src={DevAatar} alt='developer shamxeed' />
+          <DeveloperAvatar src={'/devAvatar.svg'} alt='developer shamxeed' />
         </DeveloperAvatarContainer>
         <TextContainer>
           <p>
             Hi, I'm <em>DANJUMA Musa</em> AKA <em>Shamxeed</em>, {myAge} years
             old <em>Full-Stack JavaScript Developer</em> &amp; Founder of{' '}
             <em>
+              <a style={{ color: '#0fac81' }} href='https://www.saukie.net'>
+                Saukie Pay
+              </a>
+              ,
+            </em>{' '}
+            {/*  <em>
               <a style={{ color: '#3366FF' }} href='https://hobbychats.com'>
                 Hobbychat
               </a>
@@ -53,7 +58,7 @@ const About = () => {
                 9ja Quiz
               </a>
               ,
-            </em>{' '}
+            </em>{' '} */}
             with <em>{yearsImCoding} years of coding experience.</em> I am
             currently more focused on <em>mobile applications development</em>{' '}
             with <em>React-Native</em> &amp; <em>Expo</em> to cement my
